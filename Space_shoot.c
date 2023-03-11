@@ -309,7 +309,8 @@ int main(int argc, char *argv[])
 
     refresh();  // refresh the screen to display the background and text.
 
-    SDL_Delay(5000);  // Pause to allow time to read. could use getch or kbhit.
+    // SDL_Delay(5000);  // Pause to allow time to read. could use getch or kbhit.
+    delay(5000);  // SDL_Delay() interferes with the SDL_Bgi SDL2 interface.
 
     //==========================================================================
 
@@ -870,7 +871,8 @@ int main(int argc, char *argv[])
             setvisualpage(olda);
             setactivepage(oldv);
             refresh();
-            SDL_Delay(5000);
+            //SDL_Delay(5000);
+            delay(5000);
             stop = 0;
             }  // End Game Over hack
 
